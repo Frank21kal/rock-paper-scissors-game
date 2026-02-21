@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="RockPaperScissors.css">
+</head>
+
+<body>
+
+  <section class="container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="buttons">
+      <button onclick="playGame('Rock')">Rock</button>
+      <button onclick="playGame('Paper')">Paper</button>
+      <button onclick="playGame('Scissors')">Scissors</button>
+    </div>
+
+    <p class="result"></p>
+    <p class="score"></p>
+
+    <button class="reset" onclick="resetScore()">Reset Scores</button>
+  </section>
+
+  <script>
+    let scores = JSON.parse(localStorage.getItem('scores'));
+
+    if (scores === null) {
+      scores = {
+        Wins: 0,
+        Losses: 0,
+        Draws: 0
+      };
+    }
+
+    updateScore();
+
+    function playGame(playerMove) {
+      let computerMove = pickCompMove();
+      let result;
+
+      if (playerMove === 'Rock') {
+        if (computerMove === 'Rock') result = 'Draw!';
+        else if (computerMove === 'Paper') result = 'You lose!';
+        else result = 'You win!';
+      }
+
+      else if (playerMove === 'Paper') {
+        if (computerMove === 'Paper') result = 'Draw!';
+        else if (computerMove === 'Scissors') result = 'You lose!';
+        else result = 'You win!';
+      }
+
+      else if (playerMove === 'Scissors') {
+        if (computerMove === 'Scissors') result = 'Draw!';
+        else if (computerMove === 'Rock') result = 'You lose!';
+        else result = 'You win!';
+      }
+
+      if (result === 'You win!') scores.Wins++;
+      else if (result === 'You lose!') scores.Losses++;
+      else scores.Draws++;
+
+      localStorage.setItem('scores', JSON.stringify(scores));
+
+      document.querySelector('.result').innerHTML =
+        `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
+
+      updateScore();
+    }
+
+    function pickCompMove() {
+      const ranNum = Math.random();
+
+      if (ranNum < 1 / 3) return 'Rock';
+      else if (ranNum < 2 / 3) return 'Paper';
+      else return 'Scissors';
+    }
+
+    function updateScore() {
+      document.querySelector('.score').innerHTML =
+        `Wins: ${scores.Wins} | Losses: ${scores.Losses} | Draws: ${scores.Draws}`;
+    }
+
+    function resetScore() {
+      scores = { Wins: 0, Losses: 0, Draws: 0 };
+      localStorage.removeItem('scores');
+      updateScore();
+      document.querySelector('.result').innerHTML = '';
+    }
+  </script>
+
+</body>
+
+</html>
