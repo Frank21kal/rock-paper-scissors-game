@@ -11,7 +11,7 @@ This project helped me practice **DOM manipulation**, **conditional logic**, and
 
 ## How to Play 
 1. Clone or download this repository  
-2. Open `index.html` in your browser  
+2. Open `RockPaperScissors.html` in your browser  
 3. Click on **Rock**, **Paper**, or **Scissors** buttons to play  
 4. See the results and scores live on the page  
 
@@ -21,7 +21,7 @@ This project helped me practice **DOM manipulation**, **conditional logic**, and
 - JavaScript  
 
 ## Live Demo 
-*(Add your GitHub Pages link here once deployed)*
+*Frank21kal/rock-paper-scissors-game/*
 
 > ## Author 👤
 Kali Sowe – Aspiring Full Stack Developer | Open to remote opportunities  
