@@ -20,8 +20,11 @@ This project helped me practice **DOM manipulation**, **conditional logic**, and
 - CSS3  
 - JavaScript  
 
-## Live Demo 
-*Frank21kal/rock-paper-scissors-game/*
+## Screenshot
+(<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3f11e191-d166-42a0-8249-b670489b2740" />)
 
-> ## Author 👤
+## Live Demo 
+https://frank21kal.github.io/rock-paper-scissors-game/
+
+> ## Author
 Kali Sowe – Aspiring Full Stack Developer | Open to remote opportunities  
