@@ -1,12 +1,49 @@
+* {
+  box-sizing: border-box;
+  word-spacing: 2px;
+  line-height: 1.5;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #000000;
   color: rgb(0, 0, 0);
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  color: hsl(69, 97%, 41%);
+  text-align: center;
+  margin: 25px;
+  border-bottom: thin solid #131212;
+}
+
+header .header-image {
+  display: inline;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 .container {
@@ -15,11 +52,11 @@ body {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  width: 350px;
+  width: 600px;
 }
 
-h1 {
-  margin-bottom: 20px;
+.container h1 {
+  color: black;
 }
 
 button {
@@ -38,8 +75,15 @@ button {
 }
 
 .buttons button:hover {
-  background-color: rgb(99, 92, 92);
+  background-color: #635c5c;
   transform: scale(1.05);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+  background-color: #000000;
+  color: hsl(69, 97%, 41%);
+
 }
 
 .reset {
@@ -49,7 +93,12 @@ button {
 }
 
 .reset:hover {
-  background-color: darkred;
+  background-color: rgb(216, 100, 100);
+}
+
+.reset:active {
+  background-color: rgb(8, 8, 8);
+  color: rgb(216, 100, 100);
 }
 
 .result {
@@ -66,4 +115,13 @@ button {
 
 p.score {
   color: black;
+}
+
+footer {
+  background-color: #131212;
+  margin-top: 100px;
+  padding: 15px;
+  color: hsl(69, 97%, 41%);
+  border-top: thin solid hsl(69, 97%, 41%);
+
 }
