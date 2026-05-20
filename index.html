@@ -1,54 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Rock Paper Scissors</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frankie's Rock Paper Scissors</title>
+
   <link rel="stylesheet" href="RockPaperScissors.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <section>
-      <h1>Frankie's online Game</h1>
 
-      <div class="header-image">
-        <img src="C:/Users/King Kali/OneDrive/Desktop/My pics/IMG_7106.jpg" alt="My Picture" class="header-image">
-      </div>
-      <div class="header-text">
-        <p>
-          Welcome to Frankie's online Rock Paper Scissors game! Challenge the computer and see if you can outsmart it.
-          Click on your choice to play and keep track of your scores. Have fun and may the best hand win!
-        </p>
-      </div>
-    </section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🎮 Frankie RPS</div>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Game</a></li>
+      <li><a href="#">Scores</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <button class="nav-btn">Play Now</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+  <header class="hero">
+    <h1>Rock Paper Scissors</h1>
+
+    <p>
+      Challenge the computer and prove your strategy skills!
+    </p>
   </header>
 
-  <main>
-    <section class="container">
-      <h1>Rock Paper Scissors</h1>
+  <main class="game-wrapper">
 
-      <div class="buttons">
-        <button onclick="playGame('Rock')">Rock</button>
-        <button onclick="playGame('Paper')">Paper</button>
-        <button onclick="playGame('Scissors')">Scissors</button>
+    <section class="game-card">
+
+      <div class="difficulty">
+        <button onclick="setDifficulty('easy')">Easy</button>
+        <button onclick="setDifficulty('medium')">Medium</button>
+        <button onclick="setDifficulty('hard')">Hard</button>
       </div>
 
-      <p class="result"></p>
-      <p class="score"></p>
+      <div class="game-modes">
+        <button onclick="setMode(3)">Best of 3</button>
+        <button onclick="setMode(5)">Best of 5</button>
+        <button onclick="setMode('timed')">Timed Mode</button>
+      </div>
 
-      <button class="reset" onclick="resetScore()">Reset Scores</button>
+      <p class="current-mode">Difficulty: Easy</p>
+      <p class="current-game-mode">Mode: Best of 3</p>
+
+      <div class="buttons">
+        <button onclick="playGame('Rock')" class="btn">
+          <img src="pics/rock-emoji.png" alt="">
+        </button>
+        <button onclick="playGame('Paper')" class="btn">
+          <img src="pics/paper-emoji.png" alt="">
+        </button>
+        <button onclick="playGame('Scissors')" class="btn">
+          <img src="pics/scissors-emoji.png" alt="">
+        </button>
+      </div>
+
+      <h2 class="result"></h2>
+
+      <div class="game-status"></div>
+
+      <div class="choices"></div>
+
+      <div class="scoreboard">
+        <div class="score-card">
+          <h3>Wins</h3>
+          <p id="wins">0</p>
+        </div>
+        <div class="score-card">
+          <h3>Losses</h3>
+          <p id="losses">0</p>
+        </div>
+        <div class="score-card">
+          <h3>Draws</h3>
+          <p id="draws">0</p>
+        </div>
+      </div>
+
+      <div class="leaderboard">
+        <h2>🏆 Leaderboard</h2>
+        <p class="best-score"></p>
+        <p class="games-played"></p>
+      </div>
+
+      <button class="reset" onclick="resetScore()">
+        Reset Game
+      </button>
+
     </section>
+
   </main>
 
   <footer>
-    <div>
-      <h2>Contact Me</h2>
-      <p>Email: <a href="https://mail.google.com/mail/#compose">frankiekal21@gmail.com</a></p>
-      <p>Phone: (+91) 720-677-8549</p>
-      <p>&copy; 2025 Frankie. All rights reserved.</p>
-    </div>
+    <h2>Contact Me</h2>
+
+    <p>Email: frankiekal21@gmail.com</p>
+    <p>Phone: (+91) 720-677-8549</p>
+
+    <p class="copyright">
+      © 2025 Frankie. All rights reserved.
+    </p>
   </footer>
-  <script src=" RockPaperScissors.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="RockPaperScissors.js"></script>
+
 </body>
 
 </html>
