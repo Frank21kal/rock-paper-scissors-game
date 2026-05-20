@@ -21,7 +21,8 @@ This project helped me practice **DOM manipulation**, **conditional logic**, and
 - JavaScript  
 
 ## Screenshot
-(<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3f11e191-d166-42a0-8249-b670489b2740" />)
+(<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/08865c4d-56da-450f-8cd0-8807b5c9df9d" />
+)
 
 ## Live Demo 
 https://frank21kal.github.io/rock-paper-scissors-game/
