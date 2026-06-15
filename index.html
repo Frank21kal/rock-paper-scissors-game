@@ -22,18 +22,18 @@
     <div class="logo">🎮 Frankie RPS</div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Game</a></li>
-      <li><a href="#">Scores</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#Game">Game</a></li>
+      <li><a href="#Scores">Scores</a></li>
+      <li><a href="#Contact">Contact</a></li>
     </ul>
 
-    <button class="nav-btn">Play Now</button>
+    <button class="nav-btn"><a href="#Game">Play Now</a></button>
     <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </nav>
 
-  <header class="hero">
+  <header id="Home" class="hero">
     <h1>Rock Paper Scissors</h1>
 
     <p>
@@ -51,7 +51,7 @@
         <button onclick="setDifficulty('hard')">Hard</button>
       </div>
 
-      <div class="game-modes">
+      <div id="Game" class="game-modes">
         <button onclick="setMode(3)">Best of 3</button>
         <button onclick="setMode(5)">Best of 5</button>
         <button onclick="setMode('timed')">Timed Mode</button>
@@ -78,7 +78,7 @@
 
       <div class="choices"></div>
 
-      <div class="scoreboard">
+      <div id="Scores" class="scoreboard">
         <div class="score-card">
           <h3>Wins</h3>
           <p id="wins">0</p>
@@ -108,14 +108,16 @@
   </main>
 
   <footer>
-    <h2>Contact Me</h2>
+    <div id="Contact" class="contact">
+      <h2>Contact Me</h2>
 
-    <p>Email: frankiekal21@gmail.com</p>
-    <p>Phone: (+91) 720-677-8549</p>
+      <p>Email: frankiekal21@gmail.com</p>
+      <p>Phone: (+91) 720-677-8549</p>
 
-    <p class="copyright">
-      © 2025 Frankie. All rights reserved.
-    </p>
+      <p class="copyright">
+        © 2025 Frankie. All rights reserved.
+      </p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
